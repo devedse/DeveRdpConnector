@@ -13,14 +13,31 @@
 	</Design.DataContext>
 
 	<Grid>
-		<ItemsControl Items="{Binding Environments}">
+		<TextBlock Text="{Binding Test}"></TextBlock>
+		<ItemsControl Items="{Binding Environments}" Margin="20 20 0 0">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<StackPanel Orientation="Horizontal" />
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
 					
-					<StackPanel Orientation="Horizontal" Margin="10">
+					<StackPanel Margin="10">
 						<TextBlock Text="{Binding}" Width="100" Height="100" Background="LightBlue" />
 
-						<!--<ItemsControl Items="{Binding Streams}" Margin="10 0 10 0">
+						<!-- Just a test -->
+						<StackPanel Orientation="Vertical" Margin="10 10 10 0">
+							<TextBlock Text="{Binding $self.Streams[0]}" Width="100" Height="100" Background="LightGreen" />
+						</StackPanel>
+
+						<!-- Why does this not work? I want to bind to Streams in MainWindowViewModel but I don't know how -->
+						<ItemsControl Items="{Binding Streams}" Margin="10 0 10 0">
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<StackPanel Orientation="Vertical" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
 									<StackPanel Orientation="Vertical" Margin="10 0 10 0">
@@ -28,7 +45,7 @@
 									</StackPanel>
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
-						</ItemsControl>-->
+						</ItemsControl>
 					</StackPanel>
 				</DataTemplate>
 			</ItemsControl.ItemTemplate>
