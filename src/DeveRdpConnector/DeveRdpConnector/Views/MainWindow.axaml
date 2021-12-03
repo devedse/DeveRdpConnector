@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DeveRdpConnector.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DeveRdpConnector.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="DeveRdpConnector">
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<Grid>
+		<ItemsControl Items="{Binding Environments}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					
+					<StackPanel Orientation="Horizontal" Margin="10">
+						<TextBlock Text="{Binding}" Width="100" Height="100" Background="LightBlue" />
+
+						<!--<ItemsControl Items="{Binding Streams}" Margin="10 0 10 0">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Vertical" Margin="10 0 10 0">
+										<TextBlock Text="{Binding}" />
+									</StackPanel>
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>-->
+					</StackPanel>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</Grid>
+
+</Window>
