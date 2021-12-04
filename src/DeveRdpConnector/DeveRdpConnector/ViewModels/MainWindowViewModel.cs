@@ -14,7 +14,7 @@ namespace DeveRdpConnector.ViewModels
 
         public ObservableCollection<ServerInfoGroup> Servers { get; set; } = new ObservableCollection<ServerInfoGroup>();
         public IEnumerable<string> Environments => CollectionWithEmptyItem.Concat(Servers.Select(t => t.Environment).Distinct());
-        public IEnumerable<string?> Streams => CollectionWithEmptyItem.Concat(Servers.Select(t => t.Stream + "").Distinct());
+        public IEnumerable<string?> Streams => Servers.Select(t => t.Stream + "").Distinct();
 
         public MainWindowViewModel()
         {
