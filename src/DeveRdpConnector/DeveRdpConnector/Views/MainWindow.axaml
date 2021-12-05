@@ -3,7 +3,7 @@
         xmlns:vm="using:DeveRdpConnector.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="700"
         x:Class="DeveRdpConnector.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="DeveRdpConnector">
@@ -14,17 +14,17 @@
 
 	<Grid x:Name="root">
 		<TextBlock Text="{Binding Test}"></TextBlock>
-		<ItemsControl Items="{Binding Environments}" Margin="20 20 0 0">
+		<ItemsControl Items="{Binding Environments}" Margin="0">
 			<ItemsControl.ItemsPanel>
 				<ItemsPanelTemplate>
-					<StackPanel Orientation="Horizontal" />
+					<StackPanel Orientation="Vertical" HorizontalAlignment="Left" />
 				</ItemsPanelTemplate>
 			</ItemsControl.ItemsPanel>
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
-					
-					<StackPanel Margin="10">
-						<TextBlock Text="{Binding}" Width="100" Height="100" Background="LightBlue" />
+
+					<StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+						<TextBlock Text="{Binding Name}" Width="100" Height="100" Background="LightBlue" />
 
 						<!-- Just a test -->
 						<!--<StackPanel Orientation="Vertical" Margin="10 10 10 0">
@@ -32,16 +32,16 @@
 						</StackPanel>-->
 
 						<!-- Why does this not work? I want to bind to Streams in MainWindowViewModel but I don't know how -->
-						<ItemsControl Items="{Binding #root.DataContext.Streams}" Margin="10 0 10 0">
+						<ItemsControl Items="{Binding Streams}" Margin="10 0 10 0">
 							<ItemsControl.ItemsPanel>
 								<ItemsPanelTemplate>
-									<StackPanel Orientation="Vertical" />
+									<StackPanel Orientation="Horizontal" />
 								</ItemsPanelTemplate>
 							</ItemsControl.ItemsPanel>
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
-									<StackPanel Orientation="Vertical" Margin="10 0 10 0">
-										<TextBlock Text="{Binding}" Width="100" Height="100" Background="LightGreen" />
+									<StackPanel Orientation="Horizontal" Margin="10 0 10 0">
+										<TextBlock Text="{Binding Name}" Width="100" Height="100" Background="LightGreen" />
 									</StackPanel>
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
