@@ -136,7 +136,7 @@
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
 
-									<Button Content="{Binding Name}" Background="LightGreen" />
+									<Button Content="{Binding Name}" Background="{Binding Color}" Width="140" Height="60" />
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
 						</ItemsControl>

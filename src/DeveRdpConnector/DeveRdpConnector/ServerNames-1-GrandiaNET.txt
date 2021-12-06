@@ -53,9 +53,9 @@
 10.61.100.26|Core Portal{newline}(10.61.100.26)
 
 #Production|Databases|LightGreen
-10.61.100.27|DB #2 DataLayer(new Data Modelling){newline}(10.61.100.27)
-10.61.100.28|DB #3 DataStore/EventManagement{newline}(10.61.100.28)
-10.61.100.29|DB #4 Data Modelling(OLD){newline}(10.61.100.29)
+10.61.100.27|DB #2 DataLayer{newline}(10.61.100.27)
+10.61.100.28|DB #3 DataStore{newline}Events/Data{newline}(10.61.100.28)
+10.61.100.29|DB #4 Data Modelling{newline}(10.61.100.29)
 
 #Production|DataLayer|LightBlue
 10.61.100.30|Webservices{newline}(10.61.100.30)

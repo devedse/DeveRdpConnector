@@ -43,7 +43,7 @@ namespace DeveRdpConnector.Helpers
                         try
                         {
                             var desiredColor = serverInfo.Color ?? serverInfoGroupsHere.FirstOrDefault(t => t.Color != null)?.Color ?? "";
-                            desiredColorBrush = colorConverter.ConvertFromString(desiredColor) as SolidColorBrush ?? Brushes.LightGreen;
+                            desiredColorBrush = colorConverter.ConvertFromString(desiredColor) as IBrush ?? Brushes.LightGreen;
                         }
                         catch
                         {
