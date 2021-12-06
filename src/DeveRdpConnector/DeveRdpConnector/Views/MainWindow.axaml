@@ -65,13 +65,25 @@
 					<TextBlock  Margin="10, 4, 10, 10">EDWH</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="3">
+					<TextBlock  Margin="10, 4, 10, 10">SSIS</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="0" Grid.Column="4">
 					<TextBlock  Margin="10, 4, 10, 10">DSL</TextBlock>
 				</WrapPanel>
-
-				<WrapPanel Grid.Row="2" Grid.Column="1">
-					<Button Width="100" Height="100" Background="AliceBlue" Content="Servertje"></Button>
-					<Button Width="100" Height="100" Background="AliceBlue" Content="Servertje"></Button>
+				<WrapPanel Grid.Row="0" Grid.Column="5">
+					<TextBlock  Margin="10, 4, 10, 10">EMS</TextBlock>
 				</WrapPanel>
+				<WrapPanel Grid.Row="0" Grid.Column="6">
+					<TextBlock  Margin="10, 4, 10, 10">CORE</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="0" Grid.Column="7">
+					<TextBlock  Margin="10, 4, 10, 10">SharePoint</TextBlock>
+				</WrapPanel>
+
+				<!--<WrapPanel Grid.Row="2" Grid.Column="1">
+					<Button Width="100" Height="100" Background="AliceBlue" Content="Servertje"></Button>
+					<Button Width="100" Height="100" Background="AliceBlue" Content="Servertje"></Button>
+				</WrapPanel>-->
 			</Grid>
 
 			<ItemsControl Items="{Binding UiEnvironmentStreamGroups}" Margin="0" >
@@ -102,16 +114,36 @@
 					</ItemsPanelTemplate>
 				</ItemsControl.ItemsPanel>
 				<ItemsControl.Styles>
-					<Style>
-						<Grid.Row>2</Grid.Row>
+					<Style Selector="ItemsControl > ContentPresenter">
+						<Setter Property="(Grid.Column)" Value="{Binding Column}" />
+						<Setter Property="(Grid.Row)" Value="{Binding Row}" />
 					</Style>
 				</ItemsControl.Styles>
 				<ItemsControl.ItemTemplate>
 					<DataTemplate>
-						<WrapPanel Width="300" Background="AliceBlue">
-							<Button Content="Daag" Background="LightGreen" />
-						</WrapPanel>
+						<!--<WrapPanel Width="300" Background="AliceBlue">
+							<Button Content="{Binding Name}" Background="LightGreen" />
+						</WrapPanel>-->
+
 						<!--<TextBlock Width="100" Height="100" Background="Azure" Text="hiii"></TextBlock>-->
+						<ItemsControl Items="{Binding Servers}" Margin="0" >
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<WrapPanel Orientation="Horizontal">
+									</WrapPanel>
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+
+									<Button Content="{Binding Name}" Background="LightGreen" />
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+
+
+
+
 					</DataTemplate>
 				</ItemsControl.ItemTemplate>
 			</ItemsControl>
@@ -138,9 +170,9 @@
 					<RowDefinition Height="Auto" SharedSizeGroup="R7"></RowDefinition>
 				</Grid.RowDefinitions>
 
-				<WrapPanel Grid.Row="3" Grid.Column="2" Width="300" Background="AliceBlue">
+				<!--<WrapPanel Grid.Row="3" Grid.Column="2" Width="300" Background="AliceBlue">
 					<Button Content="Hoi" Background="LightGreen" />
-				</WrapPanel>
+				</WrapPanel>-->
 
 			</Grid>
 		</Grid>

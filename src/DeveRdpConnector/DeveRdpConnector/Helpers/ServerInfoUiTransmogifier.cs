@@ -55,7 +55,7 @@ namespace DeveRdpConnector.Helpers
                         }
 
 
-                        var uiServerInfo = new UiServerInfo(serverInfo.Name, serverInfo.Address, desiredColorBrush);
+                        var uiServerInfo = new UiServerInfo(serverInfo.Name.Replace("{newline}", Environment.NewLine, StringComparison.OrdinalIgnoreCase), serverInfo.Address, desiredColorBrush);
                         uiStream.Servers.Add(uiServerInfo);
                     }
                 }

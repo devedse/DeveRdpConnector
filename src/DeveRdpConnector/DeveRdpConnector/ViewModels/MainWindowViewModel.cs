@@ -36,7 +36,7 @@ namespace DeveRdpConnector.ViewModels
             Environments = ServerInfoUiTransmogifier.Transmogify(serverInfos);
 
             UiEnvironmentStreamGroups.Clear();
-            foreach (var thing in Environments.SelectMany(t => t.Streams).Take(2))
+            foreach (var thing in Environments.SelectMany(t => t.Streams))
             {
                 UiEnvironmentStreamGroups.Add(thing);
             }

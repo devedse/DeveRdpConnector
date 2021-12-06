@@ -1,4 +1,4 @@
 ﻿namespace DeveRdpConnector.Models
 {
-    public record ServerInfo(string Name, string Address, string? Color);
+    public record ServerInfo(string Address, string Name, string? Color);
 }
