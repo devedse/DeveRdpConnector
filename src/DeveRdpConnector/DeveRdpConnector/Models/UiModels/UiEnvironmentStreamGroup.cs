@@ -3,14 +3,19 @@ using System.Collections.ObjectModel;
 
 namespace DeveRdpConnector.Models.UiModels
 {
-    public class UiStream
+    public class UiEnvironmentStreamGroup
     {
         public ObservableCollection<UiServerInfo> Servers { get; } = new ObservableCollection<UiServerInfo>();
         public string Name { get; }
 
-        public UiStream(string name)
+        public int Row { get; }
+        public int Column { get; }
+
+        public UiEnvironmentStreamGroup(string name, int row, int column)
         {
             Name = name;
+            Row = row;
+            Column = column;
         }
     }
 }

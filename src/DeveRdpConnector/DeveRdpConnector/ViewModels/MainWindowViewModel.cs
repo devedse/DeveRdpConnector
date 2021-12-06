@@ -21,15 +21,30 @@ namespace DeveRdpConnector.ViewModels
 
         public ObservableCollection<UiEnvironment> Environments { get; set; } = new ObservableCollection<UiEnvironment>();
 
+        public ObservableCollection<UiEnvironmentStreamGroup> UiEnvironmentStreamGroups { get; } = new ObservableCollection<UiEnvironmentStreamGroup>();
+
+        public string RowDefinitionsString => string.Join(",", Enumerable.Repeat("Auto", Environments.Count + 1));
+        public string ColumnDefinitionsString => string.Join(",", Enumerable.Repeat("Auto", (Environments.FirstOrDefault()?.Streams.Count ?? 1) + 1));
+
+        public ObservableCollection<object> Items { get; } = new ObservableCollection<object>();
+
         public MainWindowViewModel()
         {
             //Servers.Clear();
             //var serverInfos = ServerInfoLoader.ObtainServerInfos(new List<string>() { "ServerNames-1-TLS.txt" });
             var serverInfos = ServerInfoLoader.ObtainServerInfos(new List<string>() { @"C:\XGitPrivate\DeveRdpConnector\src\DeveRdpConnector\DeveRdpConnector\ServerNames-1-TLS.txt" });
             Environments = ServerInfoUiTransmogifier.Transmogify(serverInfos);
-            foreach (var serverInfo in serverInfos)
+
+            UiEnvironmentStreamGroups.Clear();
+            foreach (var thing in Environments.SelectMany(t => t.Streams).Take(2))
             {
-                //Servers.Add(serverInfo);
+                UiEnvironmentStreamGroups.Add(thing);
+            }
+
+            Items.Clear();
+            foreach (var env in Environments)
+            {
+                Items.Add(env);
             }
 
         }

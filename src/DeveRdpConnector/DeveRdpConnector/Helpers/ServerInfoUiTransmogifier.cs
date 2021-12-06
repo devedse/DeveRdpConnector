@@ -16,17 +16,22 @@ namespace DeveRdpConnector.Helpers
 
             var uiData = new ObservableCollection<UiEnvironment>();
 
+            //This should be enabled environments / enabled streams
             var environments = serverInfoGroups.Select(t => t.Environment).Distinct().ToList();
             var streams = serverInfoGroups.Select(t => t.Stream).Distinct().ToList();
 
-            foreach (var environment in environments)
+            for (int y = 0; y < environments.Count; y++)
             {
-                var uiEnvironment = new UiEnvironment(environment);
+                var environment = environments[y];
+
+                var uiEnvironment = new UiEnvironment(environment, y + 1);
                 uiData.Add(uiEnvironment);
 
-                foreach (var stream in streams)
+                for (int x = 0; x < streams.Count; x++)
                 {
-                    var uiStream = new UiStream(stream ?? "");
+                    var stream = streams[x];
+
+                    var uiStream = new UiEnvironmentStreamGroup(stream ?? "", y + 1, x + 1);
                     uiEnvironment.Streams.Add(uiStream);
 
                     var serverInfoGroupsHere = serverInfoGroups.Where(t => t.Environment == environment && t.Stream == stream).ToList();
@@ -34,7 +39,7 @@ namespace DeveRdpConnector.Helpers
 
                     foreach (var serverInfo in serverInfosHere)
                     {
-                        IBrush desiredColorBrush = null;
+                        IBrush? desiredColorBrush = null;
                         try
                         {
                             var desiredColor = serverInfo.Color ?? serverInfoGroupsHere.FirstOrDefault(t => t.Color != null)?.Color ?? "";

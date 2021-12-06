@@ -5,13 +5,15 @@ namespace DeveRdpConnector.Models.UiModels
 {
     public class UiEnvironment
     {
-        public ObservableCollection<UiStream> Streams { get; } = new ObservableCollection<UiStream>();
+        public ObservableCollection<UiEnvironmentStreamGroup> Streams { get; } = new ObservableCollection<UiEnvironmentStreamGroup>();
 
-        public string Name { get; set; }
+        public string Name { get;}
+        public int Row { get; }
 
-        public UiEnvironment(string name)
+        public UiEnvironment(string name, int row)
         {
             Name = name;
+            Row = row;
         }
     }
 }

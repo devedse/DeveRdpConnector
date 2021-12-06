@@ -3,6 +3,7 @@
         xmlns:vm="using:DeveRdpConnector.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:r="clr-namespace:DeveRdpConnector.Models.UiModels;assembly=DeveRdpConnector"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="700"
         x:Class="DeveRdpConnector.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -12,44 +13,161 @@
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
 
-	<Grid x:Name="root">
-		<TextBlock Text="{Binding Test}"></TextBlock>
-		<ItemsControl Items="{Binding Environments}" Margin="0">
-			<ItemsControl.ItemsPanel>
-				<ItemsPanelTemplate>
-					<StackPanel Orientation="Vertical" HorizontalAlignment="Left" />
-				</ItemsPanelTemplate>
-			</ItemsControl.ItemsPanel>
-			<ItemsControl.ItemTemplate>
-				<DataTemplate>
+	<StackPanel>
+		<Grid Grid.IsSharedSizeScope="True">
 
-					<StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-						<TextBlock Text="{Binding Name}" Width="100" Height="100" Background="LightBlue" />
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C0"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C1"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C2"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C3"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C4"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C5"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C6"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C7"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" SharedSizeGroup="R0"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R1"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R2"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R3"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R4"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R5"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R6"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R7"></RowDefinition>
+				</Grid.RowDefinitions>
 
-						<!-- Just a test -->
-						<!--<StackPanel Orientation="Vertical" Margin="10 10 10 0">
-							<TextBlock Text="{Binding #root.DataContext.Test}" Width="100" Height="150" Background="LightGreen" />
-						</StackPanel>-->
 
-						<!-- Why does this not work? I want to bind to Streams in MainWindowViewModel but I don't know how -->
-						<ItemsControl Items="{Binding Streams}" Margin="10 0 10 0">
-							<ItemsControl.ItemsPanel>
-								<ItemsPanelTemplate>
-									<StackPanel Orientation="Horizontal" />
-								</ItemsPanelTemplate>
-							</ItemsControl.ItemsPanel>
-							<ItemsControl.ItemTemplate>
-								<DataTemplate>
-									<StackPanel Orientation="Horizontal" Margin="10 0 10 0">
-										<TextBlock Text="{Binding Name}" Width="100" Height="100" Background="LightGreen" />
-									</StackPanel>
-								</DataTemplate>
-							</ItemsControl.ItemTemplate>
-						</ItemsControl>
-					</StackPanel>
-				</DataTemplate>
-			</ItemsControl.ItemTemplate>
-		</ItemsControl>
-	</Grid>
+				<WrapPanel Grid.Row="0" Grid.Column="0">
+				</WrapPanel>
 
+				<WrapPanel Grid.Row="1" Grid.Column="0">
+					<TextBlock  Margin="10, 4, 10, 10">TLS-T</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="2" Grid.Column="0">
+					<TextBlock  Margin="10, 4, 10, 10">TLS-S</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="3" Grid.Column="0">
+					<TextBlock  Margin="10, 4, 10, 10">TLS-I</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="4" Grid.Column="0">
+					<TextBlock  Margin="10, 4, 10, 10">TLS-A</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="5" Grid.Column="0">
+					<TextBlock  Margin="10, 4, 10, 10">TLS-P</TextBlock>
+				</WrapPanel>
+
+				<WrapPanel Grid.Row="0" Grid.Column="1">
+					<TextBlock  Margin="10, 4, 10, 10">Databases</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="0" Grid.Column="2">
+					<TextBlock  Margin="10, 4, 10, 10">EDWH</TextBlock>
+				</WrapPanel>
+				<WrapPanel Grid.Row="0" Grid.Column="3">
+					<TextBlock  Margin="10, 4, 10, 10">DSL</TextBlock>
+				</WrapPanel>
+
+				<WrapPanel Grid.Row="2" Grid.Column="1">
+					<Button Width="100" Height="100" Background="AliceBlue" Content="Servertje"></Button>
+					<Button Width="100" Height="100" Background="AliceBlue" Content="Servertje"></Button>
+				</WrapPanel>
+			</Grid>
+
+			<ItemsControl Items="{Binding UiEnvironmentStreamGroups}" Margin="0" >
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C0"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C1"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C2"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C3"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C4"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C5"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C6"></ColumnDefinition>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="C7"></ColumnDefinition>
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" SharedSizeGroup="R0"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R1"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R2"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R3"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R4"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R5"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R6"></RowDefinition>
+								<RowDefinition Height="Auto" SharedSizeGroup="R7"></RowDefinition>
+							</Grid.RowDefinitions>
+						</Grid>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.Styles>
+					<Style>
+						<Grid.Row>2</Grid.Row>
+					</Style>
+				</ItemsControl.Styles>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<WrapPanel Width="300" Background="AliceBlue">
+							<Button Content="Daag" Background="LightGreen" />
+						</WrapPanel>
+						<!--<TextBlock Width="100" Height="100" Background="Azure" Text="hiii"></TextBlock>-->
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C0"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C1"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C2"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C3"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C4"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C5"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C6"></ColumnDefinition>
+					<ColumnDefinition Width="Auto" SharedSizeGroup="C7"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" SharedSizeGroup="R0"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R1"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R2"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R3"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R4"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R5"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R6"></RowDefinition>
+					<RowDefinition Height="Auto" SharedSizeGroup="R7"></RowDefinition>
+				</Grid.RowDefinitions>
+
+				<WrapPanel Grid.Row="3" Grid.Column="2" Width="300" Background="AliceBlue">
+					<Button Content="Hoi" Background="LightGreen" />
+				</WrapPanel>
+
+			</Grid>
+		</Grid>
+
+
+		<!--<WrapPanel>
+			<TextBlock Text="hi"></TextBlock>
+			<ItemsControl Items="{Binding ServerInfos}" Margin="0" >
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Grid Grid.IsSharedSizeScope="True">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition SharedSizeGroup="C3" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition SharedSizeGroup="R3" />
+							</Grid.RowDefinitions>
+							
+							<WrapPanel>
+								<TextBlock Text="{Binding Name}" Width="200" Height="100" Background="LightGreen" />
+							</WrapPanel>
+
+						</Grid>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</WrapPanel>-->
+
+	</StackPanel>
 </Window>
