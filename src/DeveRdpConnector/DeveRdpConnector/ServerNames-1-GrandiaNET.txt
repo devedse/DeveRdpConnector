@@ -69,3 +69,8 @@
 
 #Production|CORE|LightGreen
 10.61.100.36|Core Portal{newline}(10.61.100.36)
+
+#DevSeats|LightYellow
+10.62.100.1|Devedse Dev Seat{newline}{10.62.100.1}|Yellow
+10.62.100.2|Hank Dev Seat{newline}{10.62.100.1}
+10.62.100.3|Gunther Dev Seat{newline}{10.62.100.1}
