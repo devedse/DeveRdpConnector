@@ -43,41 +43,41 @@
 				</WrapPanel>
 
 				<WrapPanel Grid.Row="1" Grid.Column="0">
-					<TextBlock  Margin="10, 4, 10, 10">TLS-T</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Development</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="2" Grid.Column="0">
-					<TextBlock  Margin="10, 4, 10, 10">TLS-S</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Test</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="3" Grid.Column="0">
-					<TextBlock  Margin="10, 4, 10, 10">TLS-I</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Acceptance</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="4" Grid.Column="0">
-					<TextBlock  Margin="10, 4, 10, 10">TLS-A</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Production</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="5" Grid.Column="0">
-					<TextBlock  Margin="10, 4, 10, 10">TLS-P</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">DevSeats</TextBlock>
 				</WrapPanel>
 
 				<WrapPanel Grid.Row="0" Grid.Column="1">
 					<TextBlock  Margin="10, 4, 10, 10">Databases</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="2">
-					<TextBlock  Margin="10, 4, 10, 10">EDWH</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">DataLayer</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="3">
-					<TextBlock  Margin="10, 4, 10, 10">SSIS</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">EventManagement</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="4">
-					<TextBlock  Margin="10, 4, 10, 10">DSL</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Core</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="5">
-					<TextBlock  Margin="10, 4, 10, 10">EMS</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">SharePoint</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="6">
-					<TextBlock  Margin="10, 4, 10, 10">CORE</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Some random stuff</TextBlock>
 				</WrapPanel>
 				<WrapPanel Grid.Row="0" Grid.Column="7">
-					<TextBlock  Margin="10, 4, 10, 10">SharePoint</TextBlock>
+					<TextBlock  Margin="10, 4, 10, 10">Blah</TextBlock>
 				</WrapPanel>
 
 				<!--<WrapPanel Grid.Row="2" Grid.Column="1">

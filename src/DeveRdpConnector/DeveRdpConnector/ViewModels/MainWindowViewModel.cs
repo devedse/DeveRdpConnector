@@ -32,7 +32,7 @@ namespace DeveRdpConnector.ViewModels
         {
             //Servers.Clear();
             //var serverInfos = ServerInfoLoader.ObtainServerInfos(new List<string>() { "ServerNames-1-TLS.txt" });
-            var serverInfos = ServerInfoLoader.ObtainServerInfos(new List<string>() { @"C:\XGitPrivate\DeveRdpConnector\src\DeveRdpConnector\DeveRdpConnector\ServerNames-1-TLS.txt" });
+            var serverInfos = ServerInfoLoader.ObtainServerInfos(new List<string>() { @"C:\XGitPrivate\DeveRdpConnector\src\DeveRdpConnector\DeveRdpConnector\ServerNames-1-GrandiaNET.txt" });
             Environments = ServerInfoUiTransmogifier.Transmogify(serverInfos);
 
             UiEnvironmentStreamGroups.Clear();
