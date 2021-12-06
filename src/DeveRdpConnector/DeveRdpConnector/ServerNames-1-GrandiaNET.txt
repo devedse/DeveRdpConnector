@@ -1,0 +1,71 @@
+﻿#Development|Databases|LightGreen
+10.61.100.1|DB #2{newline}(10.61.100.1)
+10.61.100.2|DB #3{newline}(10.61.100.2)
+
+#Development|DataLayer|LightGreen
+10.61.100.3|Webservices{newline}(10.61.100.3)
+10.61.100.4|DataStore{newline}(10.61.100.4)
+10.61.100.5|Data Modelling{newline}(10.61.100.5)
+10.61.100.6|NEW Data Modelling{newline}(10.61.100.6)
+
+#Development|EventManagement|LightGreen
+10.61.100.7|EventManagement{newline}(10.61.100.7)
+
+#Development|CORE|LightGreen
+10.61.100.8|Core Portal{newline}(10.61.100.8)
+
+#Development|SharePoint|LightGreen
+10.61.100.9|SP{newline}(10.61.100.9)
+
+#Test|Databases|LightGreen
+10.61.100.10|DB #2{newline}(10.61.100.10)
+10.61.100.11|DB #3{newline}(10.61.100.11)
+
+#Test|DataLayer|LightGreen
+10.61.100.12|Webservices{newline}(10.61.100.12)
+10.61.100.13|DataStore{newline}(10.61.100.13)
+10.61.100.14|NEW Data Modelling{newline}(10.61.100.14)
+10.61.100.15|Test VSC{newline}(10.61.100.15)
+
+#Test|EventManagement|LightGreen
+10.61.100.16|EventManagement{newline}(10.61.100.16)
+
+#Test|CORE|LightGreen
+10.61.100.17|Core Portal{newline}(10.61.100.17)
+
+#Test|SharePoint|LightYellow
+10.61.100.18|SP{newline}(10.61.100.18)
+
+#Acceptance|Databases|LightGreen
+10.61.100.19|DB #2{newline}(10.61.100.19)
+10.61.100.20|DB #3{newline}(10.61.100.20)
+
+#Acceptance|DataLayer|LightGreen
+10.61.100.21|Webservices{newline}(10.61.100.21)
+10.61.100.22|DataStore{newline}(10.61.100.22)
+10.61.100.23|NEW Data Modelling{newline}(10.61.100.23)
+10.61.100.24|PerfMonitor{newline}(10.61.100.24)
+
+#Acceptance|EventManagement|LightGreen
+10.61.100.25|EventManagement{newline}(10.61.100.25)
+
+#Acceptance|CORE|LightGreen
+10.61.100.26|Core Portal{newline}(10.61.100.26)
+
+#Production|Databases|LightGreen
+10.61.100.27|DB #2 DataLayer(new Data Modelling){newline}(10.61.100.27)
+10.61.100.28|DB #3 DataStore/EventManagement{newline}(10.61.100.28)
+10.61.100.29|DB #4 Data Modelling(OLD){newline}(10.61.100.29)
+
+#Production|DataLayer|LightBlue
+10.61.100.30|Webservices{newline}(10.61.100.30)
+10.61.100.31|DataStore{newline}(10.61.100.31)
+10.61.100.32|Data Modelling{newline}(10.61.100.32)
+10.61.100.33|PerfMonitor{newline}(10.61.100.33)
+10.61.100.34|NEW Data Modelling{newline}(10.61.100.34)
+
+#Production|EventManagement|LightGreen
+10.61.100.35|EventManagement{newline}(10.61.100.35)
+
+#Production|CORE|LightGreen
+10.61.100.36|Core Portal{newline}(10.61.100.36)

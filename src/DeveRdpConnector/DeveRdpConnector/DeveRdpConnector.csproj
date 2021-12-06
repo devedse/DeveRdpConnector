@@ -16,7 +16,7 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="ServerNames-1-TLS.txt">
+    <None Update="ServerNames-1-GrandiaNET.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
